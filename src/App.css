@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+ul, li, a, h2,body{
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+body {
+  font-family: 'Karantina', sans-serif;
+}
+.icon-kayak {
+  display: block;
+  width: 142px;
+  height: 80px;
+  background-image: url(./assets/kayak.png);
+}
+.card__kayak {
+  width: 100%;
+  height: 300px;
+  background-repeat: round;
+  background-image: url(./assets/image.png);
+}
+.header__right {
+  display: flex;
+  gap: 30px;
+}
+.bg__kayak {
+  background-image: url(./assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+.bg__kayak::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.content {
+  margin: 0px 60px;
+}
+.header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+.header__left > img {
+  width: 80px;
+}
+.header__rigth {
+  display: flex;
+  justify-content: space-around;
+  gap: 60px;
+}
+.burger, .burger img:last-child {
+  display: none;
+}
+@media (max-width: 720px) {
+  .header__rigth {
+    display: none;
+  }
+  .header__open {
+    background-color: #483C3C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 70%;
+    height: -webkit-fill-available;
+  }
+  .burger {
+    display: block;
+  }
+}
+.main {
+  padding-top: 90px;
+  text-align: center;
+}
+.main__title, .main__text {
+  font-size: 64px;
+  font-weight: 400;
+}
+.main__text {
+  color: #69B0B5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.order {
+  background: #110E0E;
+  padding: 185px 100px;
+  margin-top: 50px;
+}
+.order__title {
+  font-size: 64px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.orders__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.orders__form > form {
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+@media (max-width: 590px) {
+  .order {
+    padding: 185px 50px;
   }
-  to {
-    transform: rotate(360deg);
+  .main__title, .main__text {
+    font-size: 40px;
+  }
+  .buttons__buy, .buttons__total {
+    font-size: 14px !important;
+  }
+  .order__title {
+    font-size: 40px;
+  }
+  .info__input {
+    width: 250px !important;
+  }
+  .header__open {
+    width: 300px;
+  }
+}
+@media (max-width: 460px) {
+  .header__open {
+    width: 200px;
+  }
+}
+@media (max-width: 350px) {
+  .header__open {
+    width: 150px;
+  }
+}
+@media (max-width: 425px) {
+  .main__title, .main__text {
+    font-size: 30px;
+  }
+  .order__title {
+    font-size: 30px;
+  }
+  .info__input {
+    width: 200px !important;
+  }
+}
+
+label {
+  color: white;
+}
+.info__input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 30px;
+  width: 450px;
+}
+input[type="text"], input[type="number"], input[type="tel"], select, option {
+  background-color: #110E0E;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 15px 10px;
+  color: white;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.buttons__total {
+  padding: 15px 30px;
+  font-size: 24px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  color: white;
+  background-color: #110E0E;
+  border: 5px solid white;
+  border-radius: 50px;
+}
+.buttons__buy {
+  padding: 15px 30px;
+  font-size: 24px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  color: #110E0E;
+  border: 5px solid white;
+  border-radius: 50px;
+}
+.benefits {
+  background-color: #483C3C;
+  padding: 80px 150px;
+  margin-top: 50px;
+}
+.benefits__cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap
+}
+@media (max-width: 1330px) {
+  .benefits__cards {
+    justify-content: center;
+  }
+}
+.card {
+  padding: 20px;
+  width: 400px;
+  background-color: #69B0B5;
+}
+.card__header {
+  text-align: center;
+  font-size: 36px;
+}
+.card__text {
+  font-size: 18px;
+  color: black;
+}
+.contacts {
+  background-color: #110E0E;
+  padding: 150px;
+}
+.book > p {
+  margin: 0;
+}
+.book {
+  margin-top: 30px;
+}
+.info {
+  text-align: center;
+  font-weight: 400px;
+  font-size: 36px;
+}
+.tel {
+  text-align: center;
+  font-weight: 700px;
+  font-size: 36px;
+}
+@media (max-width: 590px) {
+  .benefits {
+    padding: 80px 50px;
+  }
+  .contacts {
+    padding: 80px;
+  }
+  .info {
+    font-size: 26px;
+  }
+  .tel {
+    font-size: 26px;
+  }
+}
+@media (max-width: 425px) {
+  .contacts {
+    padding: 50px;
+  }
+  .info {
+    font-size: 16px;
+  }
+  .tel {
+    font-size: 16px;
   }
 }
