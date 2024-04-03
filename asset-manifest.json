@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kayak/static/css/main.1c2cbdb8.css",
+    "main.js": "/kayak/static/js/main.4bb00c1c.js",
+    "static/media/bg.png": "/kayak/static/media/bg.569bc3158937fe47cd2e.png",
+    "static/media/image.png": "/kayak/static/media/image.7a9dc2f3b927a38724a5.png",
+    "index.html": "/kayak/index.html",
+    "main.1c2cbdb8.css.map": "/kayak/static/css/main.1c2cbdb8.css.map",
+    "main.4bb00c1c.js.map": "/kayak/static/js/main.4bb00c1c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c2cbdb8.css",
+    "static/js/main.4bb00c1c.js"
+  ]
+}
